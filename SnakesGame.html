@@ -1,0 +1,437 @@
+<! doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8"/>
+		<style>
+			#title {
+				margin-top: 30px;
+				text-align: center;
+			}
+			#box {
+				margin: auto;
+				height: 600px;
+				width: 600px;
+				border: 5px solid black;
+			}
+			.grid {
+				background-color: gray;
+				
+			}
+			table {
+				margin: auto;
+				border: 3px solid black;
+				border-collapse: collapse;
+				width: 600px;
+			}
+			td {
+				border: 1px solid black;
+				
+			}
+		</style>
+		<!--js files-->
+		<script>
+		
+		
+		
+		</script>
+	</head>
+	<body>
+		<h1 id = "title">Snake Game</h1>
+		<br>
+		<table height = "600">
+			<colgroup>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>	
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>	<col width = 4%>
+				<col width = 4%>
+			</colgroup>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			<tr>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	<td class = "grid"></td>
+				<td class = "grid"></td>	
+			</tr>
+			
+	
+	
+	
+	</body>
+</html>
