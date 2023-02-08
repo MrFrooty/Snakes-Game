@@ -1,2 +1,2 @@
 # Snakes-Game
-Snake game for final
+Snake game
